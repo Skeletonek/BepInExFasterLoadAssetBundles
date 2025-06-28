@@ -183,8 +183,9 @@ internal class AssetBundleManager
     {
         if (!DriveHelper.HasDriveSpaceOnPath(CachePath, 10))
         {
-            Patcher.Logger.LogWarning($"Ignoring request of decompressing, because the free drive space is less than 10GB");
-            return;
+            // HACK: Some linux wine users had falsly 0B of free space detected
+            // Changed the code to only warn the user instead of canceling the entire execution
+            Patcher.Logger.LogWarning($"WARNING! Detected less than 10 GB of free drive space! CLOSE THE GAME IF THAT IS REALLY A CASE!!!");
         }
 
         Patcher.Logger.LogDebug($"Queued recompress of \"{Path.GetFileName(workAsset.Path)}\" assetbundle");

@@ -1,3 +1,11 @@
+# This is a fork of BepInExFasterLoadAssetBundles to fix a minor issue happening for Linux wine users where it just wouldn't work
+
+# Please use the original mod if you don't need a fix for this [issue](https://github.com/DiFFoZ/BepInExFasterLoadAssetBundles/issues/15)
+
+## All credits goes to DiFFoZ
+
+---
+
 # BepInExFasterLoadAssetBundles
 Makes startup loading time faster by **60%**.
 
